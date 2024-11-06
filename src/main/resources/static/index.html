@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calorie Calculator</h1>
+            <p>Find out how many calories you need based on your weight and activity level!</p>
+        </header>
+        
+        <form id="calorieForm">
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+            </div>
+
+            <div class="input-group">
+                <label for="activityLevel">Activity Level:</label>
+                <select id="activityLevel" required>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly Active</option>
+                    <option value="1.55">Moderately Active</option>
+                    <option value="1.725">Very Active</option>
+                    <option value="1.9">Super Active</option>
+                </select>
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <h2 id="result"></h2>
+        <div id="dietSuggestions" class="suggestions"></div>
+
+        <h3>Meal Plan for the Day</h3>
+        <div id="mealPlan" class="meal-plan"></div>
+
+        <!-- Chart Container -->
+        <canvas id="calorieChart" width="400" height="250"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
